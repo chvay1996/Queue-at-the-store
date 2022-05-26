@@ -22,9 +22,9 @@ namespace Queue_at_the_store
 
             while (queue.Count != 0)
             {
-                foreach (var item in queue)
+                foreach (var storeQueue in queue)
                 {
-                    Console.WriteLine($"В очереди стоит на сумму: {item}");
+                    Console.WriteLine($"В очереди стоит на сумму: {storeQueue}");
                 }
 
                 result += queue.Dequeue();
