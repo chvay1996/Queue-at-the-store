@@ -12,26 +12,26 @@ namespace Queue_at_the_store
 
         static void CreateQueue()
         {
-            int result = 0;
-            Queue<int> queue = new Queue<int>();
-            queue.Enqueue(1212);
-            queue.Enqueue(515);
-            queue.Enqueue(7818);
-            queue.Enqueue(9872);
-            queue.Enqueue(2239);
+            int amountStoreMoney = 0;
+            Queue<int> store = new Queue<int>();
+            store.Enqueue(1212);
+            store.Enqueue(515);
+            store.Enqueue(7818);
+            store.Enqueue(9872);
+            store.Enqueue(2239);
 
-            while (queue.Count != 0)
+            while (store.Count != 0)
             {
-                foreach (var store in queue)
+                foreach (var queue in store)
                 {
-                    Console.WriteLine($"В очереди стоит на сумму: {store}");
+                    Console.WriteLine($"В очереди стоит на сумму: {queue}");
                 }
 
-                result += queue.Dequeue();
+                amountStoreMoney += store.Dequeue();
 
                 Clear();
 
-                Console.WriteLine($"Сумма магазина: {result}");
+                Console.WriteLine($"Сумма магазина: {amountStoreMoney}");
             }
         }
         static void Clear()
